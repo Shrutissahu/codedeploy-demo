@@ -10,7 +10,6 @@ RUN yum install gcc-c++
 RUN wget https://cmake.org/files/v3.13/cmake-3.13.0.tar.gz
 RUN tar -xvzf cmake-3.13.0.tar.gz
 RUN cd cmake-3.13.0
-RUN apt-get install --yes cmake
 RUN cmake --version
 # AWSCPPSDK we build s3 and transfer manager
 RUN git clone --recurse-submodules https://github.com/aws/aws-sdk-cpp \
