@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 USER 0
 # install required build tools via packet manager
 RUN apt-get update -y && apt-get install -y ca-certificates curl build-essential git cmake libz-dev libssl-dev libcurl4-openssl-dev
+RUN apt-get install --yes cmake
 # AWSCPPSDK we build s3 and transfer manager
 RUN git clone --recurse-submodules https://github.com/aws/aws-sdk-cpp \
     && mkdir sdk_build && cd sdk_build \
