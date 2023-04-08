@@ -5,6 +5,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 USER 0
 # install required build tools via packet manager
 RUN apt-get update -y && apt-get install -y ca-certificates curl build-essential git libz-dev libssl-dev libcurl4-openssl-dev
+RUN sudo apt install wget
+RUN sudo apt install build-essential
 RUN wget https://cmake.org/files/v3.15/cmake-3.13.0.tar.gz
 RUN tar -xvzf cmake-3.13.0.tar.gz
 RUN cd cmake-3.13.0
