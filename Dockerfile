@@ -9,6 +9,7 @@ RUN apt-get install wget
 RUN apt-get install build-essential
 RUN wget https://cmake.org/files/v3.13/cmake-3.13.0.tar.gz
 RUN tar -xvzf cmake-3.13.0.tar.gz
+RUN ls
 RUN cd cmake-3.13.0
 RUN ls
 RUN ./configure
