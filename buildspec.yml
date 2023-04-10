@@ -2,12 +2,12 @@ version: 0.2
 phases:
   build:
     commands:
-      # configure application executable, source files and linked libraries.
-      - cmake .
+      # make build dir
+      - mkdir build
+      - cd build
+      - cmake ..
       # build the application
-      - make
-      # unit test. we can test the s3_test executable by copying a local file, for example test_source.txt to an existing s3 bucket and name the file as test_dest.txt
-      - ./s3_test $SOURCE_FILE $BUCKET_NAME $DEST_FILE $REGION
+      - cmake --build .
 artifacts:
   files:
-    - s3_test
+    - build/*
