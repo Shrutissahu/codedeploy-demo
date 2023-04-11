@@ -1,5 +1,2 @@
 #!/bin/bash
-if [ -d build ]
-then
-    mkdir build
-fi
+echo "Install the dependencies"
