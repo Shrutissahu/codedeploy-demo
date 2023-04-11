@@ -1,13 +1,20 @@
 version: 0.2
 phases:
+  install:
+    commands:
+      - echo Installing dependencies in this section
+      
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase for build number $CODEBUILD_BUILD_NUMBER and build id $CODEBUILD_BUILD_ID 
   build:
     commands:
-      # make build dir
-      - mkdir build
-      - cd build
-      - cmake ..
-      # build the application
-      - cmake --build .
+      - echo Building the app now
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Entered the post_build phase
+      - echo Build completed on `date`
 artifacts:
   files:
-    - build/*
+    - '**/*'
