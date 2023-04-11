@@ -9,10 +9,6 @@ phases:
     commands:
       - docker build -t cpp-codebuild-image:v1 .
       - docker tag cpp-codebuild-image:v1 ${ECR_REGISTRY}:v1      
-      - mkdir build
-      - cd build
-      - cmake ..
-      - cmake --build .
   artifacts:
   files:
     - 'build/*'

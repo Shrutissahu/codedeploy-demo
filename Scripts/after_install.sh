@@ -1,2 +1,4 @@
 #!/bin/bash
-echo after install steps..
+cmake ..
+cmake --build .
+

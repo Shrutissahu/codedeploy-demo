@@ -1,2 +1,5 @@
 #!/bin/bash
-echo Install dependencies here ..
+if [ -d build ]
+then
+    mkdir build
+fi
